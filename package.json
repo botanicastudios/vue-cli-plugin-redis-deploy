@@ -1,0 +1,69 @@
+{
+  "name": "vue-cli-plugin-redis-deploy",
+  "version": "0.0.1",
+  "description": "A vue-cli plugin for deploying your built Vue app's index.html to Redis.",
+  "scripts": {
+    "build": "rm -rf ./dist && babel src/*.js --presets @babel/preset-env --out-dir ./",
+    "build-watch": "babel src/*.js --watch --presets @babel/preset-env --out-dir ./",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "cli",
+    "plugin",
+    "s3",
+    "aws",
+    "cloudfront",
+    "deploy",
+    "deployment"
+  ],
+  "main": "index.js",
+  "homepage": "https://github.com/botanicastudios/vue-cli-plugin-redis-deploy",
+  "author": {
+    "name": "Toby Marsden",
+    "email": "toby@botanicastudios.io",
+    "url": "https://botanicastudios.io/"
+  },
+  "license": "MIT",
+  "private": false,
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "dependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@vue/cli-shared-utils": "^3.4.0",
+    "aws-sdk": "^2.225.1",
+    "babel-core": "^7.0.0-bridge",
+    "es6-promise-pool": "^2.5.0",
+    "fs-extra": "^7.0.1",
+    "globby": "^8.0.1",
+    "joi": "^14.0.2",
+    "js-md4": "^0.3.2",
+    "lodash": "^4.17.11",
+    "mime-types": "^2.1.18",
+    "redis": "^3.0.2"
+  },
+  "devDependencies": {
+    "babel-jest": "^23.6.0",
+    "jest": "^23.6.0"
+  },
+  "files": [
+    "index.js",
+    "prompts.js",
+    "generator.js",
+    "deployer.js",
+    "configuration.js",
+    "bucket.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=8"
+  }
+}
